@@ -93,10 +93,12 @@ public  class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job>
 	    		try {
 					jobs.wait();
 				} catch (InterruptedException e) {
+					//响应外部线程中断
                   Thread.currentThread().interrupt();
 					return;
 				}
 	    	}
+	    	//获取工作列表中的第一个job
 	    	job=jobs.removeFirst();
 	    	if(job!=null){
 	    		try{
