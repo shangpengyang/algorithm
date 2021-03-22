@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 public  class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> {
 	//工作列表
@@ -84,7 +85,6 @@ public  class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job>
 
 		//是否工作
 		private volatile boolean runing =true;
-		
 		public void run() {
 	    while(runing){
 	    	Job job=null;

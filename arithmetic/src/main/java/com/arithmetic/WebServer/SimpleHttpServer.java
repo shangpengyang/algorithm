@@ -16,6 +16,7 @@ import com.arithmetic.Multithreading.DefaultThreadPool;
 import com.arithmetic.Multithreading.ThreadPool;
 
 public class SimpleHttpServer {
+	
 	// 处理HttpServer的线程池
 	static ThreadPool<HttpRequestHandler> threadPool = new DefaultThreadPool<HttpRequestHandler>(1);
 	// SimpleHttpServer根路径

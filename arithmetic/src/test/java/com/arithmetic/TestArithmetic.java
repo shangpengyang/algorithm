@@ -7,7 +7,6 @@ import com.arithmetic.arithmetic.DailyArithmetic;
 public class TestArithmetic {
 	@Test
 	public void  arithmeticTest(){
-		new DailyArithmetic().horseRacing();
 	}
 
 }
